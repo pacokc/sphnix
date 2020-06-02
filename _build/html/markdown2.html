@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Markdown: Syntax &mdash; Doc  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="h1 Heading 8-)" href="markdown3.html" />
+    <link rel="prev" title="Markdown Header" href="markdown.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Doc
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Header</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Markdown: Syntax</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#philosophy">Philosophy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#block-elements">Block Elements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#paragraphs-and-line-breaks">Paragraphs and Line Breaks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#headers">Headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blockquotes">Blockquotes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#this-is-a-header">This is a header.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#lists">Lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-blocks">Code Blocks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#span-elements">Span Elements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#links">Links</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#emphasis">Emphasis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code">Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="markdown3.html">h1 Heading 8-)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Doc</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Markdown: Syntax</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/markdown2.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="markdown-syntax">
+<h1>Markdown: Syntax<a class="headerlink" href="#markdown-syntax" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="#overview">Overview</a></p>
+<ul>
+<li><p><a class="reference external" href="#philosophy">Philosophy</a></p></li>
+<li><p><a class="reference external" href="#html">Inline HTML</a></p></li>
+<li><p><a class="reference external" href="#autoescape">Automatic Escaping for Special Characters</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#block">Block Elements</a></p>
+<ul>
+<li><p><a class="reference external" href="#p">Paragraphs and Line Breaks</a></p></li>
+<li><p><a class="reference external" href="#header">Headers</a></p></li>
+<li><p><a class="reference external" href="#blockquote">Blockquotes</a></p></li>
+<li><p><a class="reference external" href="#list">Lists</a></p></li>
+<li><p><a class="reference external" href="#precode">Code Blocks</a></p></li>
+<li><p><a class="reference external" href="#hr">Horizontal Rules</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#span">Span Elements</a></p>
+<ul>
+<li><p><a class="reference external" href="#link">Links</a></p></li>
+<li><p><a class="reference external" href="#em">Emphasis</a></p></li>
+<li><p><a class="reference external" href="#code">Code</a></p></li>
+<li><p><a class="reference external" href="#img">Images</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#misc">Miscellaneous</a></p>
+<ul>
+<li><p><a class="reference external" href="#backslash">Backslash Escapes</a></p></li>
+<li><p><a class="reference external" href="#autolink">Automatic Links</a></p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong> This document is itself written using Markdown; you
+can <a class="reference external" href="/projects/markdown/syntax.text">see the source for it by adding ‘.text’ to the URL</a>.</p>
+<hr class="docutils" />
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="philosophy">
+<h3>Philosophy<a class="headerlink" href="#philosophy" title="Permalink to this headline">¶</a></h3>
+<p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.</p>
+<p>Readability, however, is emphasized above all else. A Markdown-formatted
+document should be publishable as-is, as plain text, without looking
+like it’s been marked up with tags or formatting instructions. While
+Markdown’s syntax has been influenced by several existing text-to-HTML
+filters – including <a class="reference external" href="http://docutils.sourceforge.net/mirror/setext.html">Setext</a>, <a class="reference external" href="http://www.aaronsw.com/2002/atx/">atx</a>, <a class="reference external" href="http://textism.com/tools/textile/">Textile</a>, <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a>,
+<a class="reference external" href="http://www.triptico.com/software/grutatxt.html">Grutatext</a>, and <a class="reference external" href="http://ettext.taint.org/doc/">EtText</a> – the single biggest source of
+inspiration for Markdown’s syntax is the format of plain text email.</p>
+</div>
+</div>
+<div class="section" id="block-elements">
+<h2>Block Elements<a class="headerlink" href="#block-elements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="paragraphs-and-line-breaks">
+<h3>Paragraphs and Line Breaks<a class="headerlink" href="#paragraphs-and-line-breaks" title="Permalink to this headline">¶</a></h3>
+<p>A paragraph is simply one or more consecutive lines of text, separated
+by one or more blank lines. (A blank line is any line that looks like a
+blank line – a line containing nothing but spaces or tabs is considered
+blank.) Normal paragraphs should not be indented with spaces or tabs.</p>
+<p>The implication of the “one or more consecutive lines of text” rule is
+that Markdown supports “hard-wrapped” text paragraphs. This differs
+significantly from most other text-to-HTML formatters (including Movable
+Type’s “Convert Line Breaks” option) which translate every line break
+character in a paragraph into a <code class="docutils literal notranslate"><span class="pre">&lt;br</span> <span class="pre">/&gt;</span></code> tag.</p>
+<p>When you <em>do</em> want to insert a <code class="docutils literal notranslate"><span class="pre">&lt;br</span> <span class="pre">/&gt;</span></code> break tag using Markdown, you
+end a line with two or more spaces, then type return.</p>
+</div>
+<div class="section" id="headers">
+<h3>Headers<a class="headerlink" href="#headers" title="Permalink to this headline">¶</a></h3>
+<p>Markdown supports two styles of headers, [Setext] [1] and [atx] [2].</p>
+<p>Optionally, you may “close” atx-style headers. This is purely
+cosmetic – you can use this if you think it looks better. The
+closing hashes don’t even need to match the number of hashes
+used to open the header. (The number of opening hashes
+determines the header level.)</p>
+</div>
+<div class="section" id="blockquotes">
+<h3>Blockquotes<a class="headerlink" href="#blockquotes" title="Permalink to this headline">¶</a></h3>
+<p>Markdown uses email-style <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> characters for blockquoting. If you’re
+familiar with quoting passages of text in an email message, then you
+know how to create a blockquote in Markdown. It looks best if you hard
+wrap the text and put a <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> before every line:</p>
+<blockquote>
+<div><p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</p>
+<p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.</p>
+</div></blockquote>
+<p>Markdown allows you to be lazy and only put the <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> before the first
+line of a hard-wrapped paragraph:</p>
+<blockquote>
+<div><p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</p>
+</div></blockquote>
+<blockquote>
+<div><p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
+id sem consectetuer libero luctus adipiscing.</p>
+</div></blockquote>
+<p>Blockquotes can be nested (i.e. a blockquote-in-a-blockquote) by
+adding additional levels of <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>:</p>
+<blockquote>
+<div><p>This is the first level of quoting.</p>
+<blockquote>
+<div><p>This is nested blockquote.</p>
+</div></blockquote>
+<p>Back to the first level.</p>
+</div></blockquote>
+<p>Blockquotes can contain other Markdown elements, including headers, lists,
+and code blocks:</p>
+</div>
+</div>
+<div class="section" id="this-is-a-header">
+<h2>This is a header.<a class="headerlink" href="#this-is-a-header" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>This is the first list item.</p></li>
+<li><p>This is the second list item.</p></li>
+</ol>
+<p>Here’s some example code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">shell_exec</span><span class="p">(</span><span class="s2">&quot;echo $input | $markdown_script&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="section" id="lists">
+<h3>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
+<p>Markdown supports ordered (numbered) and unordered (bulleted) lists.</p>
+<p>Unordered lists use asterisks, pluses, and hyphens – interchangably
+– as list markers:</p>
+<ul class="simple">
+<li><p>Red</p></li>
+<li><p>Green</p></li>
+<li><p>Blue</p></li>
+</ul>
+<p>is equivalent to:</p>
+<ul class="simple">
+<li><p>Red</p></li>
+<li><p>Green</p></li>
+<li><p>Blue</p></li>
+</ul>
+<p>and:</p>
+<ul class="simple">
+<li><p>Red</p></li>
+<li><p>Green</p></li>
+<li><p>Blue</p></li>
+</ul>
+<p>Ordered lists use numbers followed by periods:</p>
+<ol class="simple">
+<li><p>Bird</p></li>
+<li><p>McHale</p></li>
+<li><p>Parish</p></li>
+</ol>
+<p>It’s important to note that the actual numbers you use to mark the
+list have no effect on the HTML output Markdown produces. The HTML
+Markdown produces from the above list is:</p>
+<p>If you instead wrote the list in Markdown like this:</p>
+<ol class="simple">
+<li><p>Bird</p></li>
+<li><p>McHale</p></li>
+<li><p>Parish</p></li>
+</ol>
+<p>or even:</p>
+<ol class="simple">
+<li><p>Bird</p></li>
+<li><p>McHale</p></li>
+<li><p>Parish</p></li>
+</ol>
+<p>you’d get the exact same HTML output. The point is, if you want to,
+you can use ordinal numbers in your ordered Markdown lists, so that
+the numbers in your source match the numbers in your published HTML.
+But if you want to be lazy, you don’t have to.</p>
+<p>To make lists look nice, you can wrap items with hanging indents:</p>
+<ul class="simple">
+<li><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+viverra nec, fringilla in, laoreet vitae, risus.</p></li>
+<li><p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+Suspendisse id sem consectetuer libero luctus adipiscing.</p></li>
+</ul>
+<p>But if you want to be lazy, you don’t have to:</p>
+<ul class="simple">
+<li><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
+viverra nec, fringilla in, laoreet vitae, risus.</p></li>
+<li><p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+Suspendisse id sem consectetuer libero luctus adipiscing.</p></li>
+</ul>
+<p>List items may consist of multiple paragraphs. Each subsequent
+paragraph in a list item must be indented by either 4 spaces
+or one tab:</p>
+<ol>
+<li><p>This is a list item with two paragraphs. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit. Aliquam hendrerit
+mi posuere lectus.</p>
+<p>Vestibulum enim wisi, viverra nec, fringilla in, laoreet
+vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
+sit amet velit.</p>
+</li>
+<li><p>Suspendisse id sem consectetuer libero luctus adipiscing.</p></li>
+</ol>
+<p>It looks nice if you indent every line of the subsequent
+paragraphs, but here again, Markdown will allow you to be
+lazy:</p>
+<ul>
+<li><p>This is a list item with two paragraphs.</p>
+<p>This is the second paragraph in the list item. You’re
+only required to indent the first line. Lorem ipsum dolor
+sit amet, consectetuer adipiscing elit.</p>
+</li>
+<li><p>Another item in the same list.</p></li>
+</ul>
+<p>To put a blockquote within a list item, the blockquote’s <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>
+delimiters need to be indented:</p>
+<ul>
+<li><p>A list item with a blockquote:</p>
+<blockquote>
+<div><p>This is a blockquote
+inside a list item.</p>
+</div></blockquote>
+</li>
+</ul>
+<p>To put a code block within a list item, the code block needs
+to be indented <em>twice</em> – 8 spaces or two tabs:</p>
+<ul>
+<li><p>A list item with a code block:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">code</span> <span class="n">goes</span> <span class="n">here</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="code-blocks">
+<h3>Code Blocks<a class="headerlink" href="#code-blocks" title="Permalink to this headline">¶</a></h3>
+<p>Pre-formatted code blocks are used for writing about programming or
+markup source code. Rather than forming normal paragraphs, the lines
+of a code block are interpreted literally. Markdown wraps a code block
+in both <code class="docutils literal notranslate"><span class="pre">&lt;pre&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;code&gt;</span></code> tags.</p>
+<p>To produce a code block in Markdown, simply indent every line of the
+block by at least 4 spaces or 1 tab.</p>
+<p>This is a normal paragraph:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">code</span> <span class="n">block</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Here is an example of AppleScript:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tell</span> <span class="n">application</span> <span class="s2">&quot;Foo&quot;</span>
+    <span class="n">beep</span>
+<span class="n">end</span> <span class="n">tell</span>
+</pre></div>
+</div>
+<p>A code block continues until it reaches a line that is not indented
+(or the end of the article).</p>
+<p>Within a code block, ampersands (<code class="docutils literal notranslate"><span class="pre">&amp;</span></code>) and angle brackets (<code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>)
+are automatically converted into HTML entities. This makes it very
+easy to include example HTML source code using Markdown – just paste
+it and indent it, and Markdown will handle the hassle of encoding the
+ampersands and angle brackets. For example, this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">div</span> <span class="n">class</span><span class="o">=</span><span class="s2">&quot;footer&quot;</span><span class="o">&gt;</span>
+    <span class="o">&amp;</span><span class="n">copy</span><span class="p">;</span> <span class="mi">2004</span> <span class="n">Foo</span> <span class="n">Corporation</span>
+<span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Regular Markdown syntax is not processed within code blocks. E.g.,
+asterisks are just literal asterisks within a code block. This means
+it’s also easy to use Markdown to write about Markdown’s own syntax.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tell</span> <span class="n">application</span> <span class="s2">&quot;Foo&quot;</span>
+    <span class="n">beep</span>
+<span class="n">end</span> <span class="n">tell</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Any decent text editor should make email-style quoting easy. For
+example, with BBEdit, you can make a selection and choose Increase
+Quote Level from the Text menu.</p>
+<div class="section" id="span-elements">
+<h2>Span Elements<a class="headerlink" href="#span-elements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="links">
+<h3>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h3>
+<p>Markdown supports two style of links: <em>inline</em> and <em>reference</em>.</p>
+<p>In both styles, the link text is delimited by [square brackets].</p>
+<p>To create an inline link, use a set of regular parentheses immediately
+after the link text’s closing square bracket. Inside the parentheses,
+put the URL where you want the link to point, along with an <em>optional</em>
+title for the link, surrounded in quotes. For example:</p>
+<p>This is <a class="reference external" href="http://example.com/">an example</a> inline link.</p>
+<p><a class="reference external" href="http://example.net/">This link</a> has no title attribute.</p>
+</div>
+<div class="section" id="emphasis">
+<h3>Emphasis<a class="headerlink" href="#emphasis" title="Permalink to this headline">¶</a></h3>
+<p>Markdown treats asterisks (<code class="docutils literal notranslate"><span class="pre">*</span></code>) and underscores (<code class="docutils literal notranslate"><span class="pre">_</span></code>) as indicators of
+emphasis. Text wrapped with one <code class="docutils literal notranslate"><span class="pre">*</span></code> or <code class="docutils literal notranslate"><span class="pre">_</span></code> will be wrapped with an
+HTML <code class="docutils literal notranslate"><span class="pre">&lt;em&gt;</span></code> tag; double <code class="docutils literal notranslate"><span class="pre">*</span></code>’s or <code class="docutils literal notranslate"><span class="pre">_</span></code>’s will be wrapped with an HTML
+<code class="docutils literal notranslate"><span class="pre">&lt;strong&gt;</span></code> tag. E.g., this input:</p>
+<p><em>single asterisks</em></p>
+<p><em>single underscores</em></p>
+<p><strong>double asterisks</strong></p>
+<p><strong>double underscores</strong></p>
+</div>
+<div class="section" id="code">
+<h3>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h3>
+<p>To indicate a span of code, wrap it with backtick quotes (<code class="docutils literal notranslate"><span class="pre">`</span></code>).
+Unlike a pre-formatted code block, a code span indicates code within a
+normal paragraph. For example:</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">printf()</span></code> function.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="markdown3.html" class="btn btn-neutral float-right" title="h1 Heading 8-)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="markdown.html" class="btn btn-neutral float-left" title="Markdown Header" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, A
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
